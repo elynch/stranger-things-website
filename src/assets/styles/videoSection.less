@@ -1,0 +1,29 @@
+.snippets-video{
+    &-wrapper{
+        background: @dark-black-light;
+        padding: 20px 40px;
+        text-align: center;
+    }
+    &-quote{
+        font-size: 25px;
+        font-style: italic;
+        margin:0;
+    }
+    &-quote,
+    &-cite{
+        color: @dark-text;
+    }
+    &-player{
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .snippets-video{
+        
+        &-player{
+            width:600px;
+            height:330px;
+        }
+    }
+}

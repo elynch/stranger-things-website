@@ -1,0 +1,74 @@
+@import './rules/fonts.less';
+@import './rules/colors.less';
+
+.header{
+    &-container{
+        background: @dark-black;
+        height:450px;
+        overflow: hidden;
+        position: relative;
+    }
+    &-nav{
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px;
+        padding-right: 40px;
+        border-bottom: 3px solid @light-red-text;
+    }
+    &-nav-link{
+        padding: 0 20px;
+        text-decoration: none;
+        color: @dark-text;
+        &:hover{
+            color: @white;
+        }
+    }
+    &-main-wrapper{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: @dark-black-rgb;
+        border-top: 3px solid @light-red-text;
+    }
+    &-main-head,
+    &-sub-head{
+        margin-left:20px;
+        margin-right:20px;
+        color: @light-red-text;
+    }
+    &-main-head{
+        font-weight: 300;
+        font-size: 30px;
+        text-align: center;
+        line-height: 1.2;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    &-sub-head{
+        margin-bottom: 20px;
+    }
+    &-img{
+        width: 100%;
+    }
+}
+
+//media queries
+@media screen and (min-width: 768px){
+    .header-container{
+        height:600px;
+    }
+    .header-main-head{
+        font-size: 55px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .header-sub-head{
+        font-size: 20px;
+    }
+    &-main-head,
+    &-sub-head{
+        margin-left:60px;
+        margin-right:60px;
+        color: @light-red-text;
+    }
+}

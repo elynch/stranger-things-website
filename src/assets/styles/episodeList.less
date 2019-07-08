@@ -1,0 +1,36 @@
+.episodes{
+    &-wrapper{
+        background: @dark-black-light;
+        padding: 20px 40px;
+        h2{
+            text-align: center;
+        }
+    }
+    &-lists{
+        h3{
+            color: @dark-text;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &-ratings{
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .episodes{
+        &-wrapper-container{
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            table{
+                margin: 0 30px;
+            }
+            td, th{
+                padding: 10px 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.section{
+    &-photo-gallery{
+        background: @white;
+        padding: 20px 40px 40px;
+        h2{
+            text-align: center;
+        }
+    }
+    &-photo-wrapper{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .section{
+        &-photo-wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        &-photo-caption{
+            margin-right: 50px;
+            font-size: 20px;
+            max-width: 200px;
+        }
+    }
+}

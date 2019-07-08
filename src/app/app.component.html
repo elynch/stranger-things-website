@@ -1,20 +1,151 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<header class="header-container">
+  <nav class="header-nav">
+    <a href="#connections" class="header-nav-link">Local Connections</a>
+    <a href="#gallery" class="header-nav-link">Photo Gallery</a>
+    <a href="#episodes" class="header-nav-link">Episode Ratings</a>
+  </nav>
+  <div class="header-main-wrapper"> 
+    <h1 class="header-main-head">{{ title }}</h1>
+    <p class="header-sub-head reverse-text">{{ subhead }}</p>
+  </div>
+  <img class="header-img" alt="The cast of Stranger Things" src="../assets/imgs/stranger-things-cover2.jpg">
+</header>
+<section class="snippets-wrapper">
+  <div class="snippets-paragraph">
+    <p *ngFor="let snippetQuote of snippetQuotes" class="snippets-text"> {{ snippetQuote }}</p>
+  </div>
+  <div class="snippets-location-wrapper">
+    <h2 class="snippets-subhead">Locations</h2>
+    <ul class="snippets-location-list">
+        <li class="snippets-location" *ngFor="let location of locations">
+          {{ location }}
+        </li>
+    </ul>
+  </div>
+</section>
+<section class="snippets-video-wrapper">
+  <h2><a class="page-subhead" name="connections">Local Connections</a></h2>
+  <blockquote class="snippets-video-quote">
+    {{ quoteText }}
+  </blockquote>
+  <p class="snippets-video-cite">{{ quoteAuthor }}</p>
+  <iframe class="snippets-video-player" src="https://www.newsobserver.com/news/local/article182498126.html/video-embed"></iframe>
+</section>
+<section class="section-photo-gallery">
+  <h2><a class="page-subhead" name="gallery">Photo Gallery</a></h2>
+  <div class="section-photo-wrapper">
+    <p class="section-photo-caption">Intersection of Cornwallis and Kerley</p>
+    <img class="section-photo-image" src="../assets/imgs/vanishing_of_will_byers.png" alt="Hopper investigating Will Byers disappereance">
+  </div>
 
+</section>
+<section class="episodes-wrapper">
+  <h2><a class="page-subhead" name="episodes">Episodes Ratings</a></h2>
+  <div class="episodes-wrapper-container">
+    <div class="episodes-lists">
+      <h3>Season 1</h3>
+      <table>
+        <thead>
+          <tr>
+            <th class="episodes-title">
+              Title
+            </th>
+            <th class="episodes-ratings">
+              Ratings
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="episodes-title">Chapter One: The Vanishing of Will Byers</td>
+            <td class="episodes-ratings">8.6</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Two: The Weirdo on Maple Street</td>
+            <td class="episodes-ratings">8.5</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Three: Holly, Jolly</td>
+            <td class="episodes-ratings">8.9</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Four: The Body</td>
+            <td class="episodes-ratings">8.9</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Five: The Flea and the Acrobat</td>
+            <td class="episodes-ratings">8.7</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Six: The Monster</td>
+            <td class="episodes-ratings">8.8</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Seven: The Bathtub</td>
+            <td class="episodes-ratings">9.1</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Eight: The Upside Down</td>
+            <td class="episodes-ratings">9.3</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+    <div class="episodes-lists">
+      <h2></h2>
+      <h3>Season 2</h3>
+      <table>
+        <thead>
+          <tr>
+            <th class="episodes-title">
+              Title
+            </th>
+            <th class="episodes-ratings">
+              Ratings
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="episodes-title">Chapter One: MADMAX</td>
+            <td class="episodes-ratings">8.4</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Two: Trick or Treat, Freak</td>
+            <td class="episodes-ratings">8.5</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Three: The Pollywog</td>
+            <td class="episodes-ratings">8.7</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Four: Will the Wise</td>
+            <td class="episodes-ratings">8.7</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Five: Dig Dug</td>
+            <td class="episodes-ratings">8.9</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Six: The Spy</td>
+            <td class="episodes-ratings">9.2</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Seven: The Lost Sister</td>
+            <td class="episodes-ratings">6.1</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Eight: The Mind Flayer</td>
+            <td class="episodes-ratings">9.3</td>
+          </tr>
+          <tr>
+            <td class="episodes-title">Chapter Nine: The Gate</td>
+            <td class="episodes-ratings">9.4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+@import './rules/fonts.less';
+@import './rules/colors.less';
+
+.snippets{
+    &-paragraph,
+    &-location-wrapper{
+        padding: 20px;
+    }
+    &-location-wrapper{
+        background: @dark-text;
+    }
+    &-subhead,
+    &-location{
+        color: @dark-black;
+    }
+
+    &-location{
+        list-style: none;
+    }
+    &-location-list{
+        padding:0;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .snippets{
+        &-wrapper{
+            display: flex;
+        }
+    
+        &-paragraph{
+            flex: 1 1 auto;
+            margin: 0 30px;
+        }
+        &-location-wrapper{
+            flex: 0 1 auto;
+            min-width: 25%;
+        }
+    }
+}
